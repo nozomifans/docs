@@ -32,7 +32,9 @@ https://developer.nvidia.com/rdp/cudnn-download
 Step 2: Run *.deb
 
 sudo dpkg -i libcudnn7_7.0.3.11-1+cuda9.0_amd64.deb
+
 sudo dpkg -i libcudnn7-devel_7.0.3.11-1+cuda9.0_amd64.deb
+
 sudo dpkg -i libcudnn7-doc_7.0.3.11-1+cuda9.0_amd64.deb
 
 ## 4. Install Anaconda
