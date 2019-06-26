@@ -14,8 +14,52 @@ Follow env_setup.md for Ubuntu or env_setup_CentOS.md for CentOS 7 machines.
 
 ## 1. Download Dataset
 
+Download competition dataset using kaggle api: https://github.com/Kaggle/kaggle-api
+
 ```bash
-$ kaggle download -u <your kaggle username> -p <your kaggle password> -c imagenet-object-localization-challenge
+$ pip install kaggle --upgrade
+```
+
+To obtain APT credentials, please follow the instruction on https://github.com/Kaggle/kaggle-api. Once done, you will have a `kaggle.json` downloaded. 
+
+Create a directory in your home
+
+```bash
+$ mkdir ~/.kaggle
+```
+
+and move the credentials into the directory,
+
+```bash
+$ mv kaggle.json ~/.kaggle/
+```
+
+For security, you can block the read access of other users by
+
+```bash
+$ chmod 600 ~/.kaggle/kaggle.json
+```
+
+You can also choose to export your Kaggle username and token to the environment:
+
+```bash
+$ export KAGGLE_USERNAME=datadinosaur
+$ export KAGGLE_KEY=xxxxxxxxxxxxxx
+```
+
+Download the dataset with command lines:
+
+```bash
+$ kaggle competitions {list, files, download, submit, submissions, leaderboard}
+$ kaggle datasets {list, files, download, create, version, init}
+$ kaggle kernels {list, init, push, pull, output, status}
+$ kaggle config {view, set, unset}
+```
+
+For the ImageNet Object Localization competition
+
+```bash
+$ kaggle competitions download imagenet-object-localization-challenge
 ```
 
 * Dataset is about 155G and unzip is necessary later, please select the directory with enough storage.
