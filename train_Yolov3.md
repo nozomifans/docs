@@ -331,10 +331,29 @@ All output including the training process will be print in the file **nohup.out*
 
 ## 5 Predict and submit results
 
-TODO
+### 5.1 Predict object detection to a csv file
+
+cd to the directory of downloaded data
+
+```bash
+$ unzip LOC_sample_submission.csv.zip
+$ mkdir submissions
+$ python3 ImageNet/predict.py
+```
+
+* Before running the script, please change the paths of the darknet and image data to the proper directories in the `predict.py`. 
+
+### 5.2 Submit prediction using Kaggle-Api
+
+If you have downloaded Kaggle-API properly as explained in Section 1, you can use the same API to submit the prediction.
+
+```bash
+$ kaggle competitions submit imagenet-object-localization-challenge -f <your csv file to submit> -m "Your comment of the submission"
+```
 
 ## 6. Improve accuracy
 
 Augmentation
 
 Ensembling
+
