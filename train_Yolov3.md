@@ -356,4 +356,3 @@ $ kaggle competitions submit imagenet-object-localization-challenge -f <your csv
 Augmentation
 
 Ensembling
-
